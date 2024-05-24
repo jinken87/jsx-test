@@ -9,14 +9,14 @@ export default [
     name: 'English',
     code: 'en',
     iso: 'en',
-    file:'en.json',
+    // file:'en.json',
     // dir: 'ltr'
   },
   {
     name: '繁体中文',
     code: 'zh-TW',
     iso: 'zh-TW',
-    file:'zh.json',
+    // file:'zh.json',
     // dir: 'ltr'
   },
   // {

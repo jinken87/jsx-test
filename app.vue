@@ -4,7 +4,7 @@ import dayjs from 'dayjs';
 export default {
   setup() {
     const list = ref([1, 2, 3]);
-    const { locale } = useI18n();
+    const { locale, setLocale } = useI18n();
 
     const a = ref(dayjs());
     const now = dayjs();
@@ -19,13 +19,18 @@ export default {
     now,
     now2,
     isSame,
-    isSame2
+    isSame2,
+    locale,
+
+    setLocale
     };
   },
   render() {
     return (
       <>
     <div>
+      <button onClick={() => this.setLocale('en')}>EN</button>
+      <button onClick={() => this.setLocale('zh')}>ZH</button>
         {this.list.map((item) => {
           return <div>{item}</div>;
         })}
@@ -37,7 +42,9 @@ export default {
         {/* <p>{`${dayjs().startOf('day')}`}</p> */}
         <p>{`${this.now2.format('YYYY-MM-DD HH:mm:ss')}`}</p>
         <p>{this.$t('ttes')}</p>
+        <p>{this.$t('ttes')}</p>
         <p>{this.$t('hello')}</p>
+        <p>{this.locale}</p>
     </div>
     </>
     );
