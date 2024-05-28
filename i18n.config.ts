@@ -9,7 +9,10 @@ export default defineI18nConfig(() => ({
     messages: {
         zh,
         en
-    }
+      }
+      
+    }));
+    
     // messages: {
     //   en: {
     //     hello: 'Hello!',
@@ -21,5 +24,3 @@ export default defineI18nConfig(() => ({
     //     ttes:'132'
     //   }
     // }
-
-}));
